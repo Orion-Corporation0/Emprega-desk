@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emprega+ | Login</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="lado-esquerdo">
+
+            <div class="logo-area">
+                <img src="/img/LEM2.png" alt="Emprega+" class="logo">
+                
+                <div>
+                    <h1>EMPREGA+</h1>
+                    <p>Painel de acesso</p>
+                </div>
+            </div>
+
+
+            <div class="texto-esquerdo">
+
+                <div class="icone-cadeado">
+                    🔒
+                </div>
+
+                <h2>Acesse sua conta</h2>
+
+                <p>
+                    Escolha o tipo de acesso e faça o
+                    login para continuar na plataforma.
+                </p>
+
+            </div>
+
+
+            
+
+        </section>
+
+
+        <section class="lado-direito">
+
+            <div class="login-card">
+
+                <h2>Entrar</h2>
+
+                <p class="subtitulo">
+                    Acesse a sua conta para continuar
+                </p>
+
+
+                <div class="tipos-acesso">
+
+                    <button class="tipo">
+                        <div class="tipo-icone">👤</div>
+
+                        <strong>Quero trabalhar</strong>
+
+                        <small>
+                            Crie seu currículo e
+                            ache vagas de emprego!
+                        </small>
+                    </button>
+
+
+                    <button class="tipo selecionado">
+                        <div class="tipo-icone">🏢</div>
+
+                        <strong>Empregador</strong>
+
+                        <small>
+                            Acesso ao painel
+                            da empresa
+                        </small>
+                    </button>
+
+
+                    <button class="tipo">
+                        <div class="tipo-icone">🛡️</div>
+
+                        <strong>Administrador</strong>
+
+                        <small>
+                            Acesso ao painel
+                            administrativo
+                        </small>
+                    </button>
+
+                </div>
+
+                <form id="loginForm">
+
+                    <label for="cnpj">
+                        CNPJ
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cnpj"
+                        placeholder=""
+                    >
+
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder=""
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="btn-entrar"
+                    >
+                        Entrar
+                    </button>
+
+                    <div class="opcoes">
+
+                        <label class="lembrar">
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+                        </label>
+
+
+                        <a href="/paginas-login/esqueceu-senha.html">
+                            Esqueceu sua senha?
+                        </a>
+
+                    </div>
+
+                </form>
+
+
+                <div class="ou">
+                    <span></span>
+                    <p>OU</p>
+                    <span></span>
+                </div>
+
+
+                <button class="google">
+                    <span>G</span>
+                    Entrar com o google
+                </button>
+
+                <div class="novo-cadastro"> Não tem uma conta?
+                 <a href="cadastro.html">Cadastre-se</a>
+                </div>
+
+
+                <p class="seguranca">
+                    🔒 Sistema seguro | inclui+ 2026 -
+                    todos os seus dados estão criptografados
+                    ponta a ponta.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

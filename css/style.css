@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-image: url("../img/FTDI.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    position: absolute;
+
+    top: 25%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+}
+
+.logo-img {
+    width: clamp(110px, 10vw, 160px);
+    height: auto;
+
+    /* IMPORTANTE: sem margin */
+    margin: 0;
+}
+
+
+/* =========================
+   EMPREGA+
+========================= */
+
+.logo-text {
+    position: absolute;
+
+    top: 42%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: clamp(24px, 2.5vw, 38px);
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    position: absolute;
+
+    top: 61%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.frase {
+    color: #2538a5;
+
+    font-size: clamp(14px, 1.3vw, 18px);
+
+    margin: 0 0 25px 0;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btn-comecar {
+    width: clamp(280px, 27vw, 435px);
+    height: clamp(50px, 4vw, 62px);
+
+    margin: 0 0 25px 0;
+
+    border: none;
+    border-radius: 40px;
+
+    background: #000b4c;
+
+    color: white;
+
+    font-size: clamp(16px, 1.3vw, 20px);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-comecar:hover {
+    background: #111d70;
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login {
+    color: #54b5e8;
+
+    font-size: clamp(13px, 1vw, 16px);
+
+    text-decoration: none;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .logo {
+        top: 18%;
+    }
+
+    .logo-text {
+        top: 40%;
+    }
+
+    .conteudo {
+        top: 55%;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        top: 15%;
+    }
+
+    .logo-img {
+        width: 110px;
+    }
+
+    .logo-text {
+        top: 34%;
+        font-size: 27px;
+    }
+
+    .conteudo {
+        top: 50%;
+    }
+
+    .btn-comecar {
+        width: 80%;
+    }
+}

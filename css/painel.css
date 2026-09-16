@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8; 
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 280px;
+    background: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.03);
+    z-index: 10;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #a0aec0;
+}
+
+.sidebar-header h2 {
+    color: #1f367e;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.sidebar-header p {
+    color: #3da9df;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #1f367e;
+    color: #ffffff;
+    border-color: #1f367e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(31, 54, 126, 0.2);
+}
+
+.help-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.help-box h4 {
+    color: #071550;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.help-box p {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.btn-help {
+    background: #1f367e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.a{
+    color: #f8fafc;
+}
+
+.btn-help:hover {
+    background: #071550;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    color: #071550;
+}
+
+.search-bar {
+    position: relative;
+    width: 350px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #1f367e;
+    box-shadow: 0 0 0 3px rgba(31, 54, 126, 0.1);
+}
+
+.greeting {
+    margin-bottom: 30px;
+}
+
+.greeting h1 {
+    color: #071550;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.greeting p {
+    color: #1f367e;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* CARDS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: white;
+    height: 110px;
+    border-radius: 12px;
+    border-left: 6px solid #1f367e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #071550;
+    font-size: 22px;
+}
+
+.section-header a {
+    color: #55b8e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+}
+
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.candidate-card {
+    background: white;
+    height: 140px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+}
+
+.footer-sec {
+    margin-top: auto;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+}

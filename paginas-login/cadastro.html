@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprega+ | Cadastro</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login-page">
+
+        <div class="lado-esquerdo">
+            <div class="logo-area">
+                <!-- Ajuste o caminho da imagem se necessário -->
+                <img src="../img/LEM2.png" alt="Logo Emprega+" class="logo">
+                <div>
+                    <h1>EMPREGA+</h1>
+                    <p>Crie seu futuro</p>
+                </div>
+            </div>
+
+            <div class="texto-esquerdo">
+                <!-- Ícone diferente para a página de cadastro -->
+                <div class="icone-cadeado">📝</div>
+                <h2>Crie sua conta</h2>
+                <p>Junte-se à plataforma Emprega+ para encontrar as melhores vagas ou anunciar oportunidades na sua empresa.</p>
+            </div>
+
+            <div class="decoracao"></div>
+        </div>
+
+
+        <div class="lado-direito">
+            <div class="login-card">
+                <h2>Cadastrar-se</h2>
+                <p class="subtitulo">Preencha os dados abaixo para começar</p>
+
+                <!-- Mantive as opções para escolher o tipo de conta -->
+                <div class="tipos-acesso" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="tipo selecionado">
+                        <div class="tipo-icone">👤</div>
+                        <strong>Quero Trabalhar</strong>
+                        <small>Criar currículo</small>
+                    </div>
+                    <div class="tipo">
+                        <div class="tipo-icone">🏢</div>
+                        <strong>Empregador</strong>
+                        <small>Anunciar vagas</small>
+                    </div>
+                </div>
+
+                <form action="#">
+                    <label>Nome Completo / Razão Social</label>
+                    <input type="text" placeholder="Digite seu nome ou empresa" required>
+
+                    <label>E-mail</label>
+                    <input type="text" placeholder="Digite seu e-mail" required>
+
+                    <label>Senha</label>
+                    <input type="password" placeholder="Crie uma senha forte" required>
+
+                    <button type="submit" class="btn-entrar">Criar Conta</button>
+
+                    <!-- Link para voltar ao Login -->
+                    <div class="opcoes" style="justify-content: center; margin-top: 25px;">
+                        <span style="color: #666; font-size: 15px;">Já tem uma conta? <a href="login.html">Faça login aqui</a></span>
+                    </div>
+                </form>
+
+                <div class="seguranca">
+                    🔒 Sistema seguro | Seus dados estão criptografados de ponta a ponta.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesTipo = document.querySelectorAll('.tipo');
+
+            botoesTipo.forEach(function(botao) {
+                botao.addEventListener('click', function() {
+                    botoesTipo.forEach(function(b) {
+                        b.classList.remove('selecionado');
+                    });
+                    this.classList.add('selecionado');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

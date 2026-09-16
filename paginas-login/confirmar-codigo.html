@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprega+ | Confirmar Código</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login-page">
+
+        <div class="lado-esquerdo">
+            <div class="logo-area">
+                <img src="../img/LEM2.png" alt="Logo Emprega+" class="logo">
+                <div>
+                    <h1>EMPREGA+</h1>
+                    <p>Verificação de segurança</p>
+                </div>
+            </div>
+
+            <div class="texto-esquerdo">
+                <div class="icone-cadeado">📩</div>
+                <h2>Verifique seu e-mail</h2>
+                <p>Enviamos um código de 6 dígitos para o seu e-mail. Digite-o abaixo para confirmar sua identidade.</p>
+            </div>
+
+            <div class="decoracao"></div>
+        </div>
+
+        <div class="lado-direito">
+            <div class="login-card">
+                <h2>Código de Confirmação</h2>
+                <p class="subtitulo">Insira o código que você recebeu</p>
+
+                <form action="nova-senha.html">
+                    <label>Código de 6 dígitos</label>
+                    <input type="text" placeholder="Ex: 123456" maxlength="6" required style="text-align: center; font-size: 20px; letter-spacing: 5px;">
+
+                    <button type="submit" class="btn-entrar">Verificar Código</button>
+
+                    <div class="novo-cadastro">
+                        Não recebeu o e-mail? <a href="#">Reenviar código</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

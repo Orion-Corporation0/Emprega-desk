@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprega+ | Painel da Empresa</title>
+    <!-- Caminho atualizado para a pasta CSS -->
+    <link rel="stylesheet" href="../css/painel.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- =========================
+           MENU LATERAL (SIDEBAR)
+        ========================= -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-pic">
+                <img src="../img/LEM2.png" alt="Logo Emprega+" style="width: 55px;">
+                </div>
+                <h2>EMPREGA+</h2>
+                <p>Empresa</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">Tela inicial</a>
+                <a href="#" class="nav-item">Vagas</a>
+                <a href="#" class="nav-item">Perfil</a>
+                <a href="#" class="nav-item">Candidatos</a>
+                
+                <!-- Caminho atualizado apontando para a pasta paginas-login -->
+                <a href="../paginas-login/login.html" class="nav-item" style="margin-top: 20px;">Sair</a>
+            </nav>
+
+            <div class="help-box">
+                <h4>Precisa de ajuda?</h4>
+                <p>Fale com nossa equipe pelo suporte!</p>
+                <button class="btn-help">Contatar Suporte</button>
+            </div>
+        </aside>
+
+        <!-- =========================
+           CONTEÚDO PRINCIPAL
+        ========================= -->
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Procurar candidatos...">
+                </div>
+            </header>
+
+            <section class="greeting">
+                <h1>Olá!</h1>
+                <p>Vamos encontrar os candidatos ideais para o que a empresa precisa?</p>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card"></div>
+                <div class="stat-card"></div>
+                <div class="stat-card"></div>
+            </section>
+
+            <div class="section-header">
+                <h2>Candidatos que enviaram solicitação para você</h2>
+                <a href="#">Ver detalhes ></a>
+            </div>
+
+            <section class="candidates-grid">
+                <div class="candidate-card"></div>
+                <div class="candidate-card"></div>
+            </section>
+
+            <footer class="footer-sec">
+                Sistema seguro | Emprega+ 2026 • todos os seus dados estão criptografados ponta a ponta.
+            </footer>
+
+        </main>
+
+    </div>
+</body>
+</html>
