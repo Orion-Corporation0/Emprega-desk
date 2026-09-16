@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Emprega+</title>
+    <!-- Corrigido para voltar 2 pastas e achar o CSS -->
+    <link rel="stylesheet" href="../../css/painel.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-pic">
+                <!-- Corrigido para voltar 2 pastas e achar a imagem -->
+                <img src="../../img/LEM2.png" alt="Logo Emprega+" style="width: 55px;">
+                </div>
+                <h2>EMPREGA+</h2>
+                <p>Admin</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="homeAdmin.html" class="nav-item active">Tela inicial</a>
+                <a href="admEmpresas.html" class="nav-item">Empresas</a>
+                <!-- Corrigido: sem acento e sem cedilha -->
+                <a href="admAvaliações.html" class="nav-item">Avaliações</a>
+                <a href="admEmpresasAtivas.html" class="nav-item">Empresas ativas</a>
+                <a href="admEmpregados.html" class="nav-item">Empregados</a>
+                
+                <a href="#" class="nav-item" style="margin-top: auto;" onclick="confirmarSaida(event)">Sair</a>
+            </nav>
+
+            <div class="help-box">
+                <h4>Precisa de ajuda?</h4>
+                <p>Fale com nossa equipe pelo suporte!</p>
+                <button class="btn-help">Conversar</button>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Procurar no painel...">
+                </div>
+            </header>
+
+            <section class="greeting">
+                <h1>Olá, admin! 👋</h1>
+                <p>Bem-vindo ao painel de gestão.</p>
+            </section>
+
+            <!-- 4 CARTÕES SUPERIORES -->
+            <section class="stats-grid admin-grid">
+                
+                <div class="stat-card">
+                    <span class="stat-title">Empresas cadastradas</span>
+                    <span class="stat-number">48</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+
+                <div class="stat-card" style="border-left-color: #48bb78;">
+                    <span class="stat-title">Empresas ativas</span>
+                    <span class="stat-number" style="color: #48bb78;">34</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-title">Empregados cadastrados</span>
+                    <span class="stat-number">1.784</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+
+                <div class="stat-card" style="border-left-color: #f6ad55;">
+                    <span class="stat-title">Avaliações recebidas</span>
+                    <span class="stat-number amarelo">378</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+
+            </section>
+
+            <!-- SEÇÃO INFERIOR -->
+            <div class="section-header">
+                <h2>Visão geral</h2>
+                <a href="#">Ver todas ></a>
+            </div>
+
+            <section class="candidates-grid">
+                <div class="candidate-card" style="height: 250px;">
+                    <!-- Gráfico Visão Geral -->
+                </div>
+                <div class="candidate-card" style="height: 250px;">
+                    <!-- Gráfico Empresas por status -->
+                </div>
+            </section>
+
+            <footer class="footer-sec">
+                <p>Sistema seguro | Emprega+ 2026 • todos os seus dados estão criptografados ponta a ponta.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- SCRIPT DE SAÍDA -->
+    <script>
+        function confirmarSaida(event) {
+            event.preventDefault(); 
+            if (confirm("Tem certeza que deseja sair?")) {
+                // Corrigido para voltar 2 pastas até o login
+                window.location.href = "../../paginas-login/login.html"; 
+            }
+        }
+    </script>
+</body>
+</html>

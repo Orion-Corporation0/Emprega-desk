@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Ativas - Painel Admin</title>
+    <!-- Caminho voltando duas pastas para achar a pasta CSS -->
+    <link rel="stylesheet" href="../../css/painel.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-pic">
+                <img src="/img/LEM2.png" alt="Logo Emprega+" style="width: 55px;">
+                </div>
+                <h2>EMPREGA+</h2>
+                <p>Admin</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- A classe active agora está em Empresas ativas -->
+                <a href="homeAdmin.html" class="nav-item">Tela inicial</a>
+                <a href="admEmpresas.html" class="nav-item">Empresas</a>
+                <a href="admAvaliações.html" class="nav-item">Avaliações</a>
+                <a href="#" class="nav-item active">Empresas ativas</a>
+                <a href="admEmpregados.html" class="nav-item">Empregados</a>
+                
+                <a href="#" class="nav-item" style="margin-top: auto;" onclick="confirmarSaida(event)">Sair</a>
+            </nav>
+
+            <div class="help-box">
+                <h4>Precisa de ajuda?</h4>
+                <p>Fale com nossa equipe pelo suporte!</p>
+                <button class="btn-help">Conversar</button>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            
+            <header class="topbar" style="align-items: flex-start;">
+                <div class="greeting">
+                    <!-- Título com a bolinha verde do lado -->
+                    <h1 style="display: flex; align-items: center; gap: 10px;">
+                        Empresas ativas <span style="color: #84cc16; font-size: 18px;">🟢</span>
+                    </h1>
+                    <p>Empresas que estão contratando e com vagas abertas.</p>
+                </div>
+                
+                <!-- Área de pesquisa e perfil -->
+                <div style="display: flex; gap: 15px; align-items: center;">
+                    <div class="search-bar" style="width: 250px;">
+                        <input type="text" placeholder="Pesquisar empresas">
+                    </div>
+                    <button class="nav-item" style="padding: 10px 20px; cursor: pointer; background: white;">Filtros</button>
+                    
+                    <div style="display: flex; align-items: center; gap: 10px; margin-left: 20px;">
+                        <div class="profile-pic" style="width: 40px; height: 40px; margin: 0; font-size: 20px;">👤</div>
+                        <div style="text-align: right; color: #071550; font-size: 14px;">
+                            <strong>Administrador</strong><br>
+                            <span style="font-size: 12px; color: #64748b;">admin@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 4 CARTÕES SUPERIORES DE ESTATÍSTICAS -->
+            <section class="stats-grid admin-grid">
+                <div class="stat-card" style="border-left-color: #3da9df;">
+                    <span class="stat-title">🏢 Empresas cadastradas</span>
+                    <span class="stat-number">48</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+                <div class="stat-card" style="border-left-color: #84cc16;">
+                    <span class="stat-title">💼 Vagas abertas</span>
+                    <span class="stat-number" style="color: #84cc16;">1.784</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+                <div class="stat-card" style="border-left-color: #1f367e;">
+                    <span class="stat-title">👥 Total de contratados</span>
+                    <span class="stat-number" style="color: #1f367e;">1.670</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+                <div class="stat-card" style="border-left-color: #facc15;">
+                    <span class="stat-title">📈 Crescimento</span>
+                    <span class="stat-number amarelo">12%</span>
+                    <span class="stat-trend" style="color: #64748b;">Essa semana</span>
+                </div>
+            </section>
+
+            <!-- SEÇÃO INFERIOR: Tabela à esquerda, Widgets à direita -->
+            <div class="avaliacoes-content">
+                
+                <!-- LADO ESQUERDO: Tabela -->
+                <div class="table-section">
+                    <h3>Lista de empresas ativas</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Empresas</th>
+                                <th>Segmento</th>
+                                <th>Vagas</th>
+                                <th>Funcionários</th>
+                                <th>Localização</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Linha 1 -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🍽️</div>
+                                    <span style="color: #071550; font-weight: bold;">Restaurante Bom Gosto</span>
+                                </td>
+                                <td>Alimentação</td>
+                                <td style="color: #071550;">38</td>
+                                <td>149</td>
+                                <td>São Paulo, SP</td>
+                                <td><span class="badge-ativa">Ativa</span></td>
+                            </tr>
+                            
+                            <!-- Linha 2 -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🛒</div>
+                                    <span style="color: #071550; font-weight: bold;">Mercado Veran</span>
+                                </td>
+                                <td>Varejo</td>
+                                <td style="color: #071550;">38</td>
+                                <td>149</td>
+                                <td>São Paulo, SP</td>
+                                <td><span class="badge-ativa">Ativa</span></td>
+                            </tr>
+
+                            <!-- Linha 3 -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🧴</div>
+                                    <span style="color: #071550; font-weight: bold;">Perfumaria Lumi</span>
+                                </td>
+                                <td>Público</td>
+                                <td style="color: #071550;">38</td>
+                                <td>149</td>
+                                <td>São Paulo, SP</td>
+                                <td><span class="badge-ativa">Ativa</span></td>
+                            </tr>
+                            
+                            <!-- Linha 4 -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🚲</div>
+                                    <span style="color: #071550; font-weight: bold;">Brinquedos Bandeira</span>
+                                </td>
+                                <td>Produção</td>
+                                <td style="color: #071550;">38</td>
+                                <td>149</td>
+                                <td>São Paulo, SP</td>
+                                <td><span class="badge-ativa">Ativa</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- LADO DIREITO: Widgets -->
+                <aside class="side-widgets">
+                    
+                    <!-- Widget: Gráfico Top Mais Vagas -->
+                    <div class="widget-card">
+                        <h3>Top mais vagas</h3>
+                        <div class="chart-container">
+                            <div class="pie-chart-placeholder"></div>
+                            <div class="chart-legend">
+                                <div class="legend-item"><div class="color-box" style="background: #84cc16;"></div> Varejo</div>
+                                <div class="legend-item"><div class="color-box" style="background: #fde047;"></div> Alimentação</div>
+                                <div class="legend-item"><div class="color-box" style="background: #3da9df;"></div> Transporte</div>
+                                <div class="legend-item"><div class="color-box" style="background: #1f367e;"></div> Público</div>
+                                <div class="legend-item"><div class="color-box" style="background: #ef4444;"></div> Outro</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget: Lista de Empresas -->
+                    <div class="widget-card">
+                        <h3>Empresas que mais contratam</h3>
+                        
+                        <div class="small-company-item">
+                            <div class="small-company-icon">🌱</div>
+                            <div class="small-company-info">
+                                <h4>Restaurante popvegan</h4>
+                                <p>180 candidatos</p>
+                            </div>
+                        </div>
+                        <div class="small-company-item">
+                            <div class="small-company-icon">💊</div>
+                            <div class="small-company-info">
+                                <h4>Farmácia Saúde+</h4>
+                                <p>125 candidatos</p>
+                            </div>
+                        </div>
+                        <div class="small-company-item">
+                            <div class="small-company-icon">🛒</div>
+                            <div class="small-company-info">
+                                <h4>Mercado Veran</h4>
+                                <p>90 candidatos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- SCRIPT DE SAÍDA -->
+    <script>
+        function confirmarSaida(event) {
+            event.preventDefault(); 
+            if (confirm("Tem certeza que deseja sair?")) {
+                window.location.href = "../../paginas-login/login.html"; 
+            }
+        }
+    </script>
+</body>
+</html>

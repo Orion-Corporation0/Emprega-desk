@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações - Painel Admin</title>
+    <!-- Caminho voltando duas pastas, como você fez na tela de Empresas -->
+    <link rel="stylesheet" href="../../css/painel.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-pic">
+                <img src="/img/LEM2.png" alt="Logo Emprega+" style="width: 55px;">
+                </div>
+                <h2>EMPREGA+</h2>
+                <p>Admin</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- A classe active agora está em Avaliações -->
+                <a href="homeAdmin.html" class="nav-item">Tela inicial</a>
+                <a href="admEmpresas.html" class="nav-item">Empresas</a>
+                <a href="a" class="nav-item active">Avaliações</a>
+                <a href="admEmpresasAtivas.html" class="nav-item">Empresas ativas</a>
+                <a href="admEmpregados.html" class="nav-item">Empregados</a>
+                
+                <a href="#" class="nav-item" style="margin-top: auto;" onclick="confirmarSaida(event)">Sair</a>
+            </nav>
+
+            <div class="help-box">
+                <h4>Precisa de ajuda?</h4>
+                <p>Fale com nossa equipe pelo suporte!</p>
+                <button class="btn-help">Conversar</button>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            
+            <header class="topbar" style="align-items: flex-start;">
+                <div class="greeting">
+                    <h1>Avaliações</h1>
+                    <p>Veja o que os trabalhadores dizem sobre as empresas.</p>
+                </div>
+                
+                <!-- Área de pesquisa e perfil -->
+                <div style="display: flex; gap: 15px; align-items: center;">
+                    <div class="search-bar" style="width: 250px;">
+                        <input type="text" placeholder="Pesquisar empresas">
+                    </div>
+                    <button class="nav-item" style="padding: 10px 20px; cursor: pointer; background: white;">Filtros</button>
+                    
+                    <div style="display: flex; align-items: center; gap: 10px; margin-left: 20px;">
+                        <div class="profile-pic" style="width: 40px; height: 40px; margin: 0; font-size: 20px;">👤</div>
+                        <div style="text-align: right; color: #071550; font-size: 14px;">
+                            <strong>Administrador</strong><br>
+                            <span style="font-size: 12px; color: #64748b;">admin@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 4 CARTÕES SUPERIORES DE AVALIAÇÕES -->
+            <section class="stats-grid admin-grid">
+                <div class="stat-card" style="border-left-color: #3da9df;">
+                    <span class="stat-title">⭐ Média geral</span>
+                    <span class="stat-number">4,8</span>
+                    <span class="stat-trend" style="color: #facc15;">★★★★☆ <span style="color: #64748b; font-size: 11px;">de estrelas</span></span>
+                </div>
+                <div class="stat-card" style="border-left-color: #84cc16;">
+                    <span class="stat-title">👍 Avaliações</span>
+                    <span class="stat-number" style="color: #84cc16;">348</span>
+                    <span class="stat-trend" style="color: #64748b;">Recebidas</span>
+                </div>
+                <div class="stat-card" style="border-left-color: #1f367e;">
+                    <span class="stat-title">💬 Empresas avaliadas</span>
+                    <span class="stat-number" style="color: #1f367e;">48</span>
+                    <span class="stat-trend">+ 5 essa semana</span>
+                </div>
+                <div class="stat-card" style="border-left-color: #ef4444;">
+                    <span class="stat-title">⚠️ Denúncias</span>
+                    <span class="stat-number" style="color: #ef4444;">2</span>
+                    <span class="stat-trend" style="color: #64748b;">Esse semestre</span>
+                </div>
+            </section>
+
+            <!-- SEÇÃO INFERIOR: Tabela à esquerda, Widgets à direita -->
+            <div class="avaliacoes-content">
+                
+                <!-- LADO ESQUERDO: Tabela -->
+                <div class="table-section">
+                    <h3>Lista de empresas ativas</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Empresas</th>
+                                <th>Avaliação</th>
+                                <th>Comentário</th>
+                                <th>Tipo</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Linha 1 (Negativa) -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🍽️</div>
+                                    Restaurante Bom Gosto
+                                </td>
+                                <td>
+                                    <span class="estrelas">★★★</span><span class="estrelas-vazias">★★</span>
+                                </td>
+                                <td><p class="comentario-texto">Muita cobrança e pouca valorização</p></td>
+                                <td><span class="badge-negativo">Negativo</span></td>
+                                <td>24/05/2025</td>
+                            </tr>
+                            
+                            <!-- Linha 2 (Negativa) -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🛒</div>
+                                    Mercado Veran
+                                </td>
+                                <td>
+                                    <span class="estrelas">★★★</span><span class="estrelas-vazias">★★</span>
+                                </td>
+                                <td><p class="comentario-texto">Muita cobrança e pouca valorização</p></td>
+                                <td><span class="badge-negativo">Negativo</span></td>
+                                <td>24/05/2025</td>
+                            </tr>
+
+                            <!-- Linha 3 (Positiva) -->
+                            <tr>
+                                <td>
+                                    <div class="empresa-icon">🌱</div>
+                                    Restaurante popvegan
+                                </td>
+                                <td>
+                                    <span class="estrelas">★★★★★</span>
+                                </td>
+                                <td><p class="comentario-texto">Ótimo ambiente de trabalho, ótimos colegas!</p></td>
+                                <td><span class="badge-positivo">Positivo</span></td>
+                                <td>8/06/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- LADO DIREITO: Widgets -->
+                <aside class="side-widgets">
+                    
+                    <!-- Widget: Barras de Progresso -->
+                    <div class="widget-card">
+                        <h3>Distribuição de avaliações</h3>
+                        
+                        <div class="progress-row">
+                            <span class="progress-label">5 Estrelas</span>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+                            <span class="progress-value">20</span>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">4 Estrelas</span>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+                            <span class="progress-value">20</span>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">3 Estrelas</span>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 40%;"></div></div>
+                            <span class="progress-value">20</span>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">2 Estrelas</span>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 15%;"></div></div>
+                            <span class="progress-value">20</span>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">1 Estrela</span>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 10%;"></div></div>
+                            <span class="progress-value">20</span>
+                        </div>
+                    </div>
+
+                    <!-- Widget: Lista de Empresas -->
+                    <div class="widget-card">
+                        <h3>Empresas que mais contratam</h3>
+                        
+                        <div class="small-company-item">
+                            <div class="small-company-icon">🌱</div>
+                            <div class="small-company-info">
+                                <h4>Restaurante popvegan</h4>
+                                <p>180 candidatos</p>
+                            </div>
+                        </div>
+                        <div class="small-company-item">
+                            <div class="small-company-icon">💊</div>
+                            <div class="small-company-info">
+                                <h4>Farmácia Saúde+</h4>
+                                <p>125 candidatos</p>
+                            </div>
+                        </div>
+                        <div class="small-company-item">
+                            <div class="small-company-icon">🛒</div>
+                            <div class="small-company-info">
+                                <h4>Mercado Veran</h4>
+                                <p>90 candidatos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- SCRIPT DE SAÍDA -->
+    <script>
+        function confirmarSaida(event) {
+            event.preventDefault(); 
+            if (confirm("Tem certeza que deseja sair?")) {
+                window.location.href = "../../paginas-login/login.html"; 
+            }
+        }
+    </script>
+</body>
+</html>
